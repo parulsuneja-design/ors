@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"></script>
+
+  </head>
+  <body>
+          <div class="container">
+       <div class="row">
+         <h1>Appointment Lists</h1>
+         <br>
+         <table class="table table-stripped table-primary">
+            <thead class="border-bottom font-weight-bold">
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Phone Number</th>
+                    <th>Service</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                  <% if(records.length > 0){
+                    records.forEach(function(row){
+                %>
+                <tr>
+                  <td><%= row.crud %></td>
+                    <td>Parul</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a class="btn btn-primary btn-xs" href="/edit/<i class="fa fa-edit"></i></a>
+                    <a class="btn btn-danger btn-xs" href="/delete/<i class="fa fa-trash"></i></a></td>
+                </tr>
+                <% }) }%>
+            </tbody>
+         </table>
+        </body>
+        </html>
+         
